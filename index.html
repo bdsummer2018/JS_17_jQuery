@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(e=>{
+            let $divs = $("div");
+
+            $divs.each((index,elem)=>{
+               $(elem).html("trulala"+index);
+            });
+
+
+            $divs.css("background","red");
+            let bg = $divs.css("background");
+
+            $divs.attr("class","vasia");
+
+            $divs.addClass("ivan");
+            $divs.removeClass("vasia");
+            $divs.toggleClass("ff");
+
+            //$divs[0].style.background="green";
+            $divs.eq(0).css("background","green");
+
+            // $divs.on("click",e=>{
+            //     e.currentTarget.style.background="blue";
+            //     $divs.off("click")
+            // })
+
+            // $divs.one("click",e=>{
+            //     e.currentTarget.style.background="blue";
+            // })
+
+            $(document).on("click","div",function () {
+                //$(this).animate({width:200},1500);
+                $(this).slideUp(1500);
+            })
+        })
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
